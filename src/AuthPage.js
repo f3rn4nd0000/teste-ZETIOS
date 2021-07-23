@@ -1,16 +1,14 @@
 import React from "react";
-import {Link } from "react-router-dom";
 import Global from "./styles/global";
-import Home from "./pages/Home/Home";
+import Auth from "./pages/Home/Auth";
 
 const data = [
   {
     id: Math.random(),
     title: "ZETIOS",
-    text: "Bem Vindo, faça seu login ou saiba mais!",
+    text: "Insira o cód. de autenticação de 2 fatores",
     bgColor: "#D5CAFA",
-    button: <Link to="/about">Sobre o projeto</Link>,
-    button2: <Link to="/authpage">Login</Link>,
+    button: "validar",
   },
   // {
   //   id: Math.random(),
@@ -32,13 +30,13 @@ const data = [
   // }
 ];
 
-function App() {
+function AuthPage() {
   return (
     <>
       <Global />
-      <Home boxData={data}/>
+      <Auth boxData={data}/>
     </>
   );
 }
 
-export default App;
+export default AuthPage;
